@@ -1,0 +1,103 @@
+$color-lv0: #ccc;
+$color-lv1: #0ff;
+$color-lv2: #0f0;
+$color-lv3: #ff0;
+$color-lv4: #f00;
+$color-lv5: #f0f;
+
+.table-guideline {
+  margin: auto;
+
+  thead tr th { text-align: center; }
+  tbody tr td {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) { text-align: center; }
+  }
+}
+
+.keikenchi {
+  margin: 0 auto 2rem;
+  width: 960px;
+  height: 520px;
+
+  .map {
+    float: left;
+    width: 520px;
+    height: 520px;
+
+    svg {
+      width: 520px;
+      height: 520px;
+    }
+  }
+
+  .score {
+    float: right;
+    width: 430px;
+    height: 520px;
+    font-size: 0.9rem;
+
+    .total td {
+      background-color: #000;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1rem;
+
+      &:nth-child(1) {
+        padding: 0 10px;
+        text-align: right;
+      }
+    }
+
+    .gap td { padding-bottom: 1rem; }
+
+    .legend {
+      td:nth-child(1) { width: 50px; }
+      td:nth-child(2) { padding: 0 10px; width: 220px; }
+      td:nth-child(3) { padding: 0 10px; width: 100px; text-align: right; }
+      td:nth-child(4) { width: 50px; }
+
+      &.lv-5 td:nth-child(1) { background-color: $color-lv5; }
+      &.lv-5 td       { border-bottom: 2px solid $color-lv5; }
+
+      &.lv-4 td:nth-child(1) { background-color: $color-lv4; }
+      &.lv-4 td       { border-bottom: 2px solid $color-lv4; }
+
+      &.lv-3 td:nth-child(1) { background-color: $color-lv3; }
+      &.lv-3 td       { border-bottom: 2px solid $color-lv3; }
+
+      &.lv-2 td:nth-child(1) { background-color: $color-lv2; }
+      &.lv-2 td       { border-bottom: 2px solid $color-lv2; }
+
+      &.lv-1 td:nth-child(1) { background-color: $color-lv1; }
+      &.lv-1 td       { border-bottom: 2px solid $color-lv1; }
+
+      &.lv-0 td:nth-child(1) { background-color: $color-lv0; }
+      &.lv-0 td       { border-bottom: 2px solid $color-lv0; }
+    }
+
+    .list td {
+      padding-bottom: 10px;
+      word-break: keep-all;
+
+      span {
+        display: inline-block;
+        padding-right: 8px;
+      }
+    }
+  }
+}
+
+.table-prefectures {
+  margin: auto;
+
+  thead tr th,
+  tbody tr td { text-align: center; }
+
+  tbody tr td {
+    min-width: 40px;
+
+    &:nth-child(7n+1) { font-weight: bold; }
+  }
+}

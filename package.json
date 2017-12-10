@@ -1,0 +1,21 @@
+{
+  "name": "keikenchi",
+  "version": "1.0.0",
+  "description": "経県値",
+  "author": "Snack <korsnack@korsnack.kr>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "jquery": "^3.2.1",
+    "node-sass": "^4.7.2",
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "build": "npm run build-js && npm run build-css",
+    "build-js": "webpack --optimize-minimize",
+    "build-css": "node-sass src/keikenchi.scss --output-style compressed > dist/keikenchi.css"
+  }
+}
