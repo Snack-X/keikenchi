@@ -17,7 +17,7 @@ $color-lv5: #f0f;
 }
 
 .keikenchi {
-  margin: 0 auto 2rem;
+  margin: 0 auto 1.5rem;
   width: 960px;
   height: 520px;
 
@@ -87,6 +87,14 @@ $color-lv5: #f0f;
       }
     }
   }
+}
+
+.links {
+  margin: auto;
+  width: 960px;
+
+  .button { width: 160px; }
+  .input { font-family: monospace; }
 }
 
 .table-prefectures {

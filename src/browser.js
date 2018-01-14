@@ -65,10 +65,18 @@ function update() {
 
   $(".keikenchi .score .total td:nth-child(2)").text(totalKeikenchi);
 
-  // replaceState
-  const search = "?d=" + keikenArr.join("");
+  const keikenData = keikenArr.join("");
+
+  // Update url
+  const search = "?d=" + keikenData;
   const baseurl = location.protocol + "//" + location.host + location.pathname;
   history.replaceState(null, document.title, baseurl + search);
+
+  // Update link
+  const permalink = `https://kkn.snack.studio/map.html?d=${keikenData}`;
+  const imageSvg = `https://kkni.snack.studio/image/${keikenData}.svg`;
+  $(".links .permalink").val(permalink);
+  $(".links .image-svg").val(imageSvg);
 }
 
 function onSvgPathClick() {
