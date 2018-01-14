@@ -1,0 +1,6 @@
+{
+  "name": "keikenchi-server",
+  "dependencies": {
+    "koa": "^2.4.1"
+  }
+}
