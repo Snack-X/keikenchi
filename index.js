@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const koa = require("koa");
 const canvas = require("./node_modules/canvas-prebuilt/canvas/index");
+canvas.registerFont(path.join(__dirname, "LestoSansKR-Regular.ttf"), { family: "Lesto Sans KR" });
 
 const WEB_PORT = 20012;
 
@@ -123,7 +124,7 @@ function renderAsCanvas(template, data) {
   match = template.match(/<text fill="(.+)" text-anchor="end" font-size="(\d+)" x="(\d+)" y="(\d+)">(.+)<\/text>/);
   if(match) {
     ctx.fillStyle = match[1];
-    ctx.font = `${parseFloat(match[2]) * 0.75}pt sans-serif`;
+    ctx.font = `${parseFloat(match[2]) * 0.75}pt 'Lesto Sans KR'`;
     const metrics = ctx.measureText(match[5]);
 
     let targetX = parseFloat(match[3]), targetY = parseFloat(match[4]);
