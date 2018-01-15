@@ -1,6 +1,7 @@
 {
   "name": "keikenchi-server",
   "dependencies": {
+    "canvas-prebuilt": "^2.0.0-alpha.5",
     "koa": "^2.4.1"
   }
 }

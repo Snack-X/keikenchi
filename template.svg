@@ -61,5 +61,5 @@ path { vector-effect: non-scaling-stroke; }
 	<path class="prefecture __keiken_46__" data-name="沖縄県" d="M825.3,870.7l0.2,0.1l0.2,0.1l3.1-2.7l2.6-2l-0.9-4.3l-0.6-1.7l0.3-5.4l3.6-1.1l6.4-6.8l5-1.9l4.3-4.8l-6.6-1.8l-1.6-2.8l3-5.9l7,1.3l-1.4,3.7l7.4,0.1l6-6.4l6.1-7.1l2.5-6.2l5.1,7.5l-4.9,10.3L870,836l-8.8,3.5l0.9,3.3l-11.4,4.1l-4.1,4l-8.3,2.5l0.1,0.5l2.3,6.2l-2.4,2.5l-1.1,2.7l-1.1,1.3l-2.2,5.2l-1.4,2.2l0.5,1.7l-1.1,5.6l-2.5,2.5l-6,1.2l1-6l-1.5-2.1l1.4-6.3L825.3,870.7z"/>
 	<path class="separator" d="M950,750L830,750L730,850L730,950"/>
 </g>
-<text fill="#aaa" text-anchor="end" font-size="24" y="990" x="995">경현치 (https://kkn.snack.studio)</text>
+<text fill="#aaa" text-anchor="end" font-size="24" x="995" y="990">경현치 (https://kkn.snack.studio)</text>
 </svg>
