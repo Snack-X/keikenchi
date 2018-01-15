@@ -74,9 +74,11 @@ function update() {
 
   // Update link
   const permalink = `https://kkn.snack.studio/map.html?d=${keikenData}`;
-  const imageSvg = `https://kkni.snack.studio/image/${keikenData}.svg`;
+  const imageBase = `https://kkni.snack.studio/image/${keikenData}.`;
   $(".links .permalink").val(permalink);
-  $(".links .image-svg").val(imageSvg);
+  $(".links .image-svg").val(imageBase + "svg");
+  $(".links .image-jpg").val(imageBase + "jpg");
+  $(".links .image-png").val(imageBase + "png");
 }
 
 function onSvgPathClick() {
