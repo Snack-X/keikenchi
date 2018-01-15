@@ -52,7 +52,7 @@ async function requestHandler(ctx) {
 
       if(type === "jpg") {
         ctx.type = "image/jpg";
-        outputStream = cv.jpegStream();
+        outputStream = cv.jpegStream({ quality: 90 });
       }
       else if(type === "png") {
         ctx.type = "image/png";
@@ -60,8 +60,8 @@ async function requestHandler(ctx) {
       }
 
       const buffers = [];
-      outputStream.on("data", function(chunk) { buffers.push(chunk); });
-      outputStream.on("end", function() { ctx.body = Buffer.concat(buffers); });
+
+      ctx.body = outputStream;
     }
     else {
       ctx.status = 415;
@@ -69,9 +69,10 @@ async function requestHandler(ctx) {
       return;
     }
   }
-
-  ctx.status = 404;
-  ctx.body = errorBody;
+  else {
+    ctx.status = 404;
+    ctx.body = errorBody;
+  }
 }
 
 //==============================================================================
