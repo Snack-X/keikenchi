@@ -1,0 +1,42 @@
+${require('./partials/start.html')}
+${require('./partials/header.html')}
+
+<section class="section">
+  <div class="container">
+    <div class="content">
+      <blockquote>
+        <p>'경현(経県)'이란, 지리를 좋아하는 사람들이 지리 정보 사이트 <a href="https://uub.jp/">'도도부현시구정촌(都道府県市区町村)'</a>에 모여 고안한 것입니다. 일본 전국 47개 도도부현의 경험을 6개의 레벨로 나눠 판정합니다. 이 레벨을 '경현도(経県度)'라 부르고, 47개 도도부현의 경현도를 합계한 것을 '경현치(経県値)'라고 합니다. 또, 이 경현치를 일본 지도에 구분하여 칠한 것을 '경현치 지도'라고 부릅니다.</p>
+        <p class="has-text-right"><cite><a href="https://uub.jp/kkn/">都道府県市区町村</a></cite></p>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title">경현도 기준 가이드라인</h2>
+    <table class="table is-striped table-guideline">
+      <thead>
+        <tr><th>명칭</th><th>점수</th><th>기준</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>거주 (居住)</td><td>5점</td><td>살았다 (3개월 정도의 장기 체류도 포함)</td></tr>
+        <tr><td>숙박 (宿泊)</td><td>4점</td><td>묵었다 (야간 통과는 제외)</td></tr>
+        <tr><td>방문 (訪問)</td><td>3점</td><td>걸었다 (묵었던 적은 없다)</td></tr>
+        <tr><td>접지 (接地)</td><td>2점</td><td>내렸다 (환승이나 휴게소에서의 휴식 등)</td></tr>
+        <tr><td>통과 (通過)</td><td>1점</td><td>통과했다 (철도, 자동차 등으로 통과나 배의 기항 등. 항공기의 상공 통과는 제외)</td></tr>
+        <tr><td>미답 (未踏)</td><td>0점</td><td>미경현 (스친 적도 없다)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="hero is-info is-bold">
+  <div class="hero-body has-text-centered">
+    <div class="container">
+      <a class="button is-info is-inverted is-outlined is-large" href="/map.html">경현치 계산하기</a>
+    </div>
+  </div>
+</section>
+
+${require('./partials/end.html')}

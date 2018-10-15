@@ -6,16 +6,36 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
-    "jquery": "^3.2.1",
-    "node-sass": "^4.7.2",
-    "webpack": "^3.10.0"
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-stage-3": "^7.0.0",
+    "@babel/runtime": "^7.1.2",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "d3-geo": "^1.11.1",
+    "d3-path": "^1.0.7",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.3.1",
+    "mapshaper": "^0.4.97",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.3",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "svg-inline-loader": "^0.8.0",
+    "svgo": "^1.1.1",
+    "topojson-client": "^3.0.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   },
   "scripts": {
-    "build": "npm run build-js && npm run build-css",
-    "build-js": "webpack --optimize-minimize",
-    "build-css": "node-sass src/keikenchi.scss --output-style compressed > dist/keikenchi.css"
+    "dev": "NODE_ENV=development webpack-dev-server --progress --mode development",
+    "build": "npm run build-map && npm run build-web",
+    "prebuild-web": "rimraf dist",
+    "build-web": "NODE_ENV=production webpack --mode production",
+    "build-map": "node scripts/build-data.js && node scripts/generate-map.js"
   }
 }

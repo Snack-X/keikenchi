@@ -1,0 +1,62 @@
+${require('./partials/start.html')}
+${require('./partials/header.html')}
+
+<section class="section">
+  <div class="container">
+    <h2 class="title">경현치 계산하기</h2>
+    <div class="keikenchi">
+      <div class="map">
+        ${require('./map-big.svg')}
+      </div>
+      <div class="score">
+        <table>
+          <tr class="total"><td colspan="3">합계 경현치 </td><td></td></tr>
+          <tr class="gap"><td colspan="4"></td></tr>
+          <tr class="legend lv-5"><td></td><td>거주 (살았다)</td><td>5점 ×</td><td></td></tr>
+          <tr class="list lv-5"><td colspan="4"></td></tr>
+          <tr class="legend lv-4"><td></td><td>숙박 (묵었다)</td><td>4점 ×</td><td></td></tr>
+          <tr class="list lv-4"><td colspan="4"></td></tr>
+          <tr class="legend lv-3"><td></td><td>방문 (걸었다)</td><td>3점 ×</td><td></td></tr>
+          <tr class="list lv-3"><td colspan="4"></td></tr>
+          <tr class="legend lv-2"><td></td><td>접지 (내렸다)</td><td>2점 ×</td><td></td></tr>
+          <tr class="list lv-2"><td colspan="4"></td></tr>
+          <tr class="legend lv-1"><td></td><td>통과 (통과했다)</td><td>1점 ×</td><td></td></tr>
+          <tr class="list lv-1"><td colspan="4"></td></tr>
+          <tr class="legend lv-0"><td></td><td>미답 (미경현)</td><td>0점 ×</td><td></td></tr>
+          <tr class="list lv-0"><td colspan="4"></td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="links">
+      <div class="field has-addons">
+        <div class="control"><a class="button is-small is-success">고유 주소</a></div>
+        <div class="control is-expanded"><input class="input is-small is-success permalink" type="text" readonly></div>
+      </div>
+      <div class="field has-addons">
+        <div class="control"><a class="button is-small is-info">SVG 이미지 링크</a></div>
+        <div class="control is-expanded"><input class="input is-small is-info image-svg" type="text" readonly></div>
+      </div>
+      <div class="field has-addons">
+        <div class="control"><a class="button is-small is-info">PNG 이미지 링크</a></div>
+        <div class="control is-expanded"><input class="input is-small is-info image-png" type="text" readonly></div>
+      </div>
+      <div class="field has-addons">
+        <div class="control"><a class="button is-small is-info">JPG 이미지 링크</a></div>
+        <div class="control is-expanded"><input class="input is-small is-info image-jpg" type="text" readonly></div>
+      </div>
+    </div>
+    <hr>
+    <table class="table is-bordered is-narrow table-prefectures">
+      <thead>
+        <tr>
+          <th></th><th>거주</th><th>숙박</th><th>방문</th><th>접지</th><th>통과</th><th>미답</th>
+          <th></th><th>거주</th><th>숙박</th><th>방문</th><th>접지</th><th>통과</th><th>미답</th>
+          <th></th><th>거주</th><th>숙박</th><th>방문</th><th>접지</th><th>통과</th><th>미답</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+${require('./partials/end.html')}

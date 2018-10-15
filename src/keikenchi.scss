@@ -77,13 +77,18 @@ $color-lv5: #f0f;
       &.lv-0 td       { border-bottom: 2px solid $color-lv0; }
     }
 
-    .list td {
-      padding-bottom: 10px;
-      word-break: keep-all;
+    .list {
+      box-shadow: none;
+      border-radius: 0;
+      
+      td {
+        padding-bottom: 10px;
+        word-break: keep-all;
 
-      span {
-        display: inline-block;
-        padding-right: 8px;
+        span {
+          display: inline-block;
+          padding-right: 8px;
+        }
       }
     }
   }

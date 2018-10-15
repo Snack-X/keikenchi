@@ -1,3 +1,5 @@
+import './keikenchi.scss';
+
 const $ = require("jquery");
 const prefectures = require("./prefectures");
 const nPrefs = prefectures.length;
@@ -92,6 +94,9 @@ function onSvgPathClick() {
 }
 
 $(function() {
+  if (!location.pathname.endsWith('map.html'))
+    return;
+
   // Check initial state
   let initial = [];
   const search = location.search;
