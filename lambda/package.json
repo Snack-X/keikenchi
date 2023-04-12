@@ -1,0 +1,8 @@
+{
+  "name": "keikenchi-lambda",
+  "author": "Snack <korsnack@korsnack.kr>",
+  "license": "MIT",
+  "dependencies": {
+    "canvas": "^2.11.2"
+  }
+}
